@@ -1,0 +1,767 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+
+:root{
+    --primary-color: #87e9ff;
+    --white-stoke: #ffffff;
+    --black-stoke: #000000;
+    --white-light: #cccccc;  
+}
+
+body{
+    background-color: #1c1d20;
+}
+
+.Section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 120px 18px;
+    gap:100px;
+    position: relative;
+}
+
+.Section2{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white-stoke);
+    gap: 0;
+    padding: 120px 18%;
+    position: relative;
+    overflow: hidden;
+    gap: 50px;
+}
+
+.Section2::after{
+    content: "";
+    position: absolute;
+    bottom: -20%;
+    left: -5px;
+    height: 450px;
+    width: 450px;
+    border-radius: 50%;
+    background-color: #f3f3f3;
+}
+
+.sticky{
+    background-color: var(--white-stoke);
+}
+
+.sticky .Nav_Left ul li p{
+    color: var(--black-stoke);
+}
+
+.sticky #Open_Menu{
+    color: var(--black-stoke);
+}
+
+.sticky .Logo h3{
+    color: var(--black-stoke);
+}
+
+.Hero_Sticky #text{
+    color: var(--primary-color) !important; 
+}
+
+#Open_Menu{
+    color: var(--white-stoke);
+    font-size: 1.8rem;
+}
+
+nav{
+    width:100%;
+    height:90px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 8%; 
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 999;
+}
+
+.Nav_Left{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+nav .Logo{
+    width: 130px;
+}
+nav .Logo h3{
+    font-size: 1.8rem;
+    color: var(--white-stoke);
+    font-weight: 600;
+}
+
+.Nav_Left ul{
+    display: flex;
+    gap: 20px;
+}
+
+.Nav_Left ul li{
+    color: var(--white-stoke);
+}
+
+.Nav_Left ul li p{
+    font-size: 0.9rem;
+    transition: .6s;
+}
+
+.Nav_Left ul li p:hover{
+    color: var(--primary-color);
+}
+
+#Close_Menu{
+    color: #ffffffc0;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    font-size: 1.8rem;
+    z-index: 99;
+}
+
+.Sidebar_Menu{
+    width: 35%;
+    min-height: 100vh;
+    display:flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: column;
+    position: absolute;
+    top: 0%;
+    right: -100%;
+    border-left: 1px solid #333333;
+    background-color: #101010;
+    z-index: 999;
+    padding: 60px;
+    transition: .6s;
+}
+.active{
+    right: 0%;
+}
+
+.Menu_Top{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Sidebar_Menu ul:nth-child(1){
+    height: 100%;
+    width: 10%;
+    display: flex;
+    gap: 30px;
+}
+
+.Sidebar_Menu ul:nth-child(1) li a{
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: var(--white-light);
+    transition: .4s;
+}
+
+.Sidebar_Menu ul:nth-child(1) li a:hover{
+    color: var(--primary-color);
+}
+
+.Main_Menu{
+    height: 350px;
+    width: 100%;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.Main_Menu::-webkit-scrollbar-thumb{
+    background-color: var(--primary-color);
+    border-radius: 10px;
+}
+
+.Main_Menu::-webkit-scrollbar{
+    background-color: #222222;
+    color: var(--primary-color);
+    width: 4px;
+    border-radius: 10px;
+    overflow-x: visible;
+}
+
+.Main_Menu li{
+    padding: 20px 0px;
+
+}
+.Main_Menu li a{
+    font-size: 7vh;
+    line-height: .9;
+    font-weight: 500;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(90deg, #ffffff, #9aecff 50%, #ffffff 0);
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: .91s;
+}
+
+.Main_Menu li a:hover{
+    background-position: 0;
+}
+
+.Menu_Bottom{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap:30px;
+    margin-top: 50px;
+}
+
+.Menu_Bottom li span{
+    color: var(--white-light);
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: .4s;
+}
+
+.Menu_Bottom li span:hover{
+    color: var(--primary-color);
+}
+
+.Sidebar_Menu p{
+    width: 50%;
+    line-height: 1.5;
+    color: var(--white-stoke);
+    margin-top: 20px;
+} 
+
+.Hero{
+    min-height: 100vh;
+    background-image: url(images/1280x720-electric-blue-solid-color-background.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 9;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.Hero::after{
+    content: "";
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 50%;
+    height: 100%;
+    background-color: #21e9ff;
+    border-radius: 95% 0 0 0;
+    z-index: -1;
+    visibility: visible; 
+}
+
+
+.Hero_Image{
+    position: absolute;
+    height: 100%;
+    width: 55%;
+    bottom: 0%;
+    right: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Hero_Image img{
+    width: 75%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#element1{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 10%;
+}
+
+.Hero #text{
+    position: fixed;
+    bottom: 2%;
+    left: 2%;
+    width: 12%;
+    color: var(--white-stoke);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    line-height: 1.3rem;
+    z-index: 999;
+}
+
+.Hero_title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+    color: var(--white-stoke);
+    z-index: 9;
+    margin-left: 50px;
+}
+
+.Hero_title span{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.Hero_title h1{
+    width: 60%;
+    font-size: 5.3rem;
+    font-weight: 700;
+}
+
+.Counter{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    z-index: 1;
+}
+
+.Counter_Col{
+    width: 30%;
+    background-color: rgba(255, 255, 255, .1);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 30px;
+    border-radius: 30px;
+    border-bottom: 2px solid #ffffff47;
+    gap: 20px;
+}
+
+.Counter_Col h3{
+    font-size: 2rem;
+}
+.Counter_Col p{
+    color: var(--white-stoke);
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+    text-transform: uppercase;
+}
+
+.btn{
+    position: relative;
+    background-color: transparent;
+    border: none;
+    height: 60px;
+    width: 180px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-left: 100px;
+    color: var(--white-stoke);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: .6s;
+}
+
+.btn::after{
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: -50%;
+    height: 1.5px;
+    width: 40%;
+    background-color: var(--white-stoke);
+    transition: .6s;
+}
+
+.btn:hover{
+    transform: translateX(-20px);
+}
+
+.btn:hover::after{
+    transform: translateX(20px);
+    width: 30%;
+}
+
+.Social_Icon{
+    position: fixed;
+    right: -100px;
+    top: 50%;
+    width: 300px;
+    transform: rotate(90deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    margin-top: 0;
+    transition: .6s;
+    z-index: 9999;
+}
+
+.Social_Icon li {
+    transition: .4s;
+}
+
+.Social_Icon li i {
+    color: var(--white-stoke);
+    font-size: 1.8rem;
+    transition: .4s;
+}
+
+.Social_Icon li:hover i{
+    color: var(--black-stoke);
+}
+
+.Experience_Years{
+    height: 620px;
+    width: 20%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.Experience_Years .num{
+    font-size: 6rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.Experience_Years .num sup{
+    font-size: 3.5rem;
+}
+
+.Experience_Years span{
+    color: var(--black-stoke);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.Designer_Main{
+    width: 80% 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.Designer_Main h2{
+    font-size: 2rem;
+    line-height: 3rem;
+    font-weight: 700;
+}
+
+.Designer_Main h2 span{
+    color: var(--primary-color);
+}
+
+.Designer_Wrap{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-content: center;
+    place-items: center;
+    gap: 20px;
+}
+
+.Item{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    transition: .6s;
+    z-index: 9;
+}
+
+.Item h3{
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.Item p{
+    line-height: 1.8rem;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.Item Button{
+    color: var(--black-stoke);
+    font-size: 0.9rem;
+    position: relative;
+    margin-left: 0;
+    gap: 10px;
+    transform: translateY(38px);
+    transition: .6s;
+}
+
+.Item Button:hover{
+    color: var(--primary-color);
+}
+
+.Item:hover button{
+    transform: translateY(0);
+}
+
+.Item Button::after{
+    display: none;
+}
+
+.Experience{
+    background-image: url(images/Night\ Cord\ Miku.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    gap: 50px;
+}
+
+.Experience_Title{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #048d7f;
+    margin-bottom: 20px;
+}
+
+.Experience_Title h2{
+    font-size: 3.5rem;
+}
+
+.Experience_Slide{
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     gap: 50px;
+}
+
+.Experience_Main{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: #640250;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(155, 0, 125, 0.25);
+    gap: 20px;
+}
+
+.Experience_Content{
+    width: 40%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.Year span{
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+.Experience_Main .Programmer h5{
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 2.5rem;
+}
+
+.Experience_Info p{
+    font-weight: 400;
+    color: #640250;
+    font-size: 1rem;
+    line-height: 1.8rem;
+}
+
+.Experience_Btn{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.Experience_Btn button{
+    background-color: #048d7f;
+    border: none;
+    width: 200px;
+    height: 60px;
+    font-size: 1rem;
+    color: #640250;
+    font-weight: 700;
+    border-radius: 80px;
+}
+
+.swiper{
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+@media screen and (max-width: 1400px){
+    .Section{
+        padding: 120px 12%;
+        padding-bottom: 0;
+    }
+    .Section2{
+        padding: 120px 12%;
+        padding-bottom: 0;
+    }
+    
+}
+
+@media screen and (max-width: 1200px){
+    .Section{
+        padding: 120px 8%;
+    }
+    .Section2{
+        padding: 120px 8%;
+    }
+    .Sidebar_Menu{
+        width: 40%;
+    }
+    .Hero::after{
+        width: 100%;
+    }
+    .Social_Icon{
+        left: 85%;
+        top: 50%;
+    }
+    .Hero #text{
+        width: 15%;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .Sidebar_Menu{
+        width: 50%;
+    }
+    .Main_Menu{
+        margin-top: 40px;
+    }
+    .Hero{
+        padding: 120px 0;
+        overflow-x: hidden;
+    }
+    .Hero_Image{
+        width: 70%;
+        right: -16%; 
+    }
+    .Hero_title{
+        width: 85%;
+    }
+    .Hero_title h1{
+        width: 90%;
+    }
+    .Hero #text{
+        width: 20%;
+    }
+    .Social_Icon{
+        display: none;
+    }
+    .Experience_Years{
+        display: none;
+    }
+    .Designer_Main{
+        width: 100%;
+    }
+    .Experience_Main .Programmer h5{
+        font-size: 1rem;
+        line-height: 1.7rem;
+        font-weight: 600;
+    }
+}
+
+@media screen and (max-width: 768px){
+
+    .Section2::after{
+        bottom: -15px;
+        left: -10px;
+    }
+    .Sidebar_Menu p{
+        width: 75%;
+    }
+    .Sidebar_Menu{
+        width: 75%;
+    }
+    .Hero_title h1{
+        width: 100%;
+        font-size: 4.5rem;
+    }
+    .Hero_Image{
+        right: -23%;
+        width: 100%;
+    }
+    .Hero_Image img{
+        width: 65%;
+    }
+    .Counter{
+        align-items: start;
+        flex-direction: column;
+    }
+    .Counter_Col{
+        width: 80%;
+    }
+    .Experience_Main{
+        flex-direction: column;
+    }
+    .Experience_Content{
+        width: 100%;
+    }
+    .Experience_Info{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .Section2::after{
+        bottom: -10px;
+        left: -14px;
+    }
+    .Sidebar_Menu{
+        width: 100%;
+    }
+    .Nav_Left ul{
+        display: none;
+    }
+    .Hero_Image img{
+        width: 110%;
+        opacity: 0.8;
+        filter: brightness(0.5);
+    }
+    .Counter_Col{
+        width: 100%;
+    }
+    .Hero #text{
+        width: 35%;
+    }
+    .Designer_Main h2 span{
+        font-size: 1.7rem;
+    }
+    .Designer_Wrap{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
